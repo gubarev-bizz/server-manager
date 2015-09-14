@@ -217,6 +217,11 @@ class SiteController extends Controller
                 throw $this->createNotFoundException('Unable to find Site entity.');
             }
 
+            $this->addFlash(
+                'success',
+                'Site deleted successfully'
+            );
+
             $em->remove($entity);
             $em->flush();
         }
