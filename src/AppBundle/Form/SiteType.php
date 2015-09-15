@@ -49,7 +49,7 @@ class SiteType extends AbstractType
                 'type' => new ServerType(),
                 'by_reference' => false,
                 'attr' => [
-                    'help-block' => 'Servers associated with this site'
+                    'help-block' => 'There should be one server entry for each physical (or virtual) server.'
                 ]
             ])
             ->add('domains', 'collection', [
@@ -58,7 +58,7 @@ class SiteType extends AbstractType
                 'type' => new DomainType(),
                 'by_reference' => false,
                 'attr' => [
-                    'help-block' => 'Domain names associated with this site'
+                    'help-block' => 'There should be one domain entry for each FQDN, subdomains can be listed separately where it makes sense.'
                 ]
             ])
         ;
